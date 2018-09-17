@@ -8,8 +8,7 @@ Output : Clusters formed with the clustering attributes
 3. Extract the recordkey of each record. 
 4. Find the position of the clustering attribute from each line and retrieve its corresponding value/values.
 5. For the first clusterng attribute,
-    If the clustering attribute is single-valued, create a node with the recordkey as its first field and its value as the second
-    field.
+    If the clustering attribute is single-valued, create a node with the recordkey as its first field and its value as the second field.
         E.g: "Student1":{"name":"xxx","gender":"Female",lang":["Hindi","English"]} -> the node will be formed as |Student1|Female|
         for the attribute 'gender'.
     If the clustering attribute is multi-valued, create nodes equal to the number of values corresponding to the attribute. Each
@@ -25,8 +24,8 @@ Output : Clusters formed with the clustering attributes
        |Student1|Female|Hindi| - |Student1|Female|English| - |Student2|Male|Tamil| - |Student2|Male|English|
 #Traversing the linked list
 8. Traverse each node in the linked list.
-9. For each clustering attribute i,
-      -> examine the (i+1)th field in the node
+9. For each clustering attribute i,\\
+      -> examine the (i+1)th field in the node\\
       -> When the first distinct value is found, retain the node as such in the list.
       -> When a new distinct value is found, create a new list for that distinct value.
       -> When a field value matches with an already found value, then store the node in the corresponding list 
