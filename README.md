@@ -8,9 +8,9 @@ Output : Clusters formed with the clustering attributes
 3. Extract the recordkey of each record.     
 4. Find the position of the clustering attribute from each line and retrieve its corresponding value/values.   
 5. For the first clusterng attribute,   
-    If the clustering attribute is single-valued, create a node with the recordkey as its first field and its value as the second field.    
+        If the clustering attribute is single-valued, create a node with the recordkey as its first field and its value as the second field.    
         E.g: "Student1":{"name":"xxx","gender":"Female",lang":["Hindi","English"]} -> the node will be formed as     |Student1|Female| for the attribute 'gender'.        
-    If the clustering attribute is multi-valued, create nodes equal to the number of values corresponding to the attribute. Each node will hold the recordkey as the first field and the value as the second field.    
+        If the clustering attribute is multi-valued, create nodes equal to the number of values corresponding to the attribute. Each node will hold the recordkey as the first field and the value as the second field.    
         E.g: "Student1":{"name":"xxx","gender":"Female",lang":["Hindi","English"]} -> the nodes will be formed as |Student1|Hindi| and |Student1|English| for the attribute 'lang'.     
 6. For other clustering attributes,
      add the values of the clustering attributes as the next field to the already created node with the respective recordkey.      
